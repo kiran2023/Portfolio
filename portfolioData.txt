@@ -1,0 +1,180 @@
+------------------HEADER----------------------------
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+
+
+-----------------------navbar---------------------
+
+<header class="header">
+        <img src="logo1.png" alt="Logo" class="logo" srcset="">
+
+        <nav class="navbar">
+            <ul class="navbar-lists">
+                <li><a href="index.html" class="navbar-link home-link">Home</a></li>
+                <li><a href="portfolio.html" class="navbar-link portfolio-link">PortFolio</a></li>
+                <li><a href="projects.html" class="navbar-link project-link">Projects</a></li>
+                <li><a href="contact.html" class="navbar-link contact-link">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+-------------------------------------FOOTER------------------------------
+
+
+     <!-- FOOTER SECTION -->
+
+     <footer class="footerData">
+        <div class="container grid grid-four-column">
+            <div class="about">
+                <h3>About Website</h3>
+                <p>More Stuffs Will be Updated day to day on this site Stay Tuned and Keep Learning with love from KIRAN
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">Profile</a>
+                    </li>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">Projects</a>
+                    </li>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">My Works</a>
+                    </li>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-projects">
+                <h3>Projects Done</h3>
+                <ul>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">Webapge Using Html Css</a>
+                    </li>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">Website Using bootstrap</a>
+                    </li>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">Temperatur Convertor Using JavaScript</a>
+                    </li>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">Jokes Javascript API</a>
+                    </li>
+                </ul><br>
+                <hr><br>
+                <h3>Upcoming project</h3>
+                <ul>
+                    <li>
+                        <span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <a href="#">SGPA & CGPA Calculator</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-help">
+                <h3>Have any Queries Feel Free to Reach out Us</h3>
+                <ul>
+                    <li>
+                        <span>
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <a href="#">ERODE,Tamil nadu</a>
+                    </li>
+                    <li>
+                        <span>
+                            <ion-icon name="call-outline"></ion-icon>
+                        </span>
+                        <a href="tel:+911234567893">1234569878</a>
+                    </li>
+                    <li>
+                        <span>
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </span>
+                        <a href="mailto:cecskiran23@gmail.com">cecskiran23@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="container">
+            <div class="f-social-links">
+                <a href="#">
+                    <span>
+                        <ion-icon name="logo-instagram" class="icon"></ion-icon>
+                    </span>
+                </a>
+                <a href="#">
+                    <span>
+                        <ion-icon name="logo-facebook" class="icon"></ion-icon>
+                    </span>
+                </a>
+                <a href="#">
+                    <span>
+                        <ion-icon name="logo-whatsapp" class="icon"></ion-icon>
+                    </span>
+                </a>
+                <a href="#">
+                    <span>
+                        <ion-icon name="logo-github" class="icon"></ion-icon>
+                    </span>
+                </a>
+                <a href="#">
+                    <span>
+                        <ion-icon name="logo-linkedin" class="icon"></ion-icon>
+                    </span>
+                </a>
+                <p>&copy;2022 All Rights Reserved by KIRAN - CSE KSRCE</p><br>
+                <p><a href="https://www.youtube.com/c/ThapaTechnical/featured" style="color: white;"
+                        target="_none">Reference & Taught by <b>THAPA TECHNICAL</b> youtube Channel</a> </p>
+            </div>
+        </section>
+    </footer>
+
+
+
+---------------------SCRIPT SECTION---------------------------------
+
+<!-- Script Section -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
