@@ -722,6 +722,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
+    padding:20px;
 }
 
 .contact-section .grid {
