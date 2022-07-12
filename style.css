@@ -740,8 +740,8 @@ p {
 .contact-section button {
     width: 25%;
     text-align: center;
-    display:flex;
-    justify-content:center;
+    display:grid;
+    place-items:center;
 }
 
 /* FOOTER SECTION */
