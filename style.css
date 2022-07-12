@@ -740,6 +740,8 @@ p {
 .contact-section button {
     width: 25%;
     text-align: center;
+    display:flex;
+    justify-content:center;
 }
 
 /* FOOTER SECTION */
@@ -968,6 +970,9 @@ footer a:hover,footer a:active{
      }
      .contact-section button{
          width: 45%;
+     }
+     .contact-section{
+         padding:1rem;
      }
 
      .Resume-section .grid-three-column{
