@@ -889,7 +889,7 @@ footer a:hover,footer a:active{
         text-align: center;
     }
     .section-hero picture img{
-        max-width: 45%;
+        max-width: 60%;
         margin-top: 3.2rem;
     }
 
@@ -964,6 +964,10 @@ footer a:hover,footer a:active{
          font-size: 1rem;
          padding: 0.5rem;
      }
+     .section-hero picture img{
+        max-width: 80%;
+        margin-top: 3.2rem;
+    }
      
      .service-section .grid-three-column{
          grid-template-columns: 1fr;
