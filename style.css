@@ -969,6 +969,22 @@ footer a:hover,footer a:active{
          grid-template-columns: 1fr;
          gap: 4.6rem;
      }
+    
+    .bio-data-progress span {
+         left: 72%;
+     }
+    .progress2 span {
+         left: 62%;
+     }
+    .progress3 span {
+         left: 76%;
+     }
+    .progress3 span {
+         left: 56%;
+     }
+     .progress3 span {
+         left: 66%;
+     }
      .contact-section button{
          width: 45%;
      }
