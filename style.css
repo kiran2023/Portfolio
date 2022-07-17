@@ -1036,9 +1036,6 @@ footer a:hover,footer a:active{
        grid-template-columns: 1fr 1fr;
        flex-direction: column;
     }
-    .footer-help a{
-       font-size:0.8rem;
-    }
     .contact-section button{
         width: 55%;
     }
