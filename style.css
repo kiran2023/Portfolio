@@ -6,9 +6,10 @@
     box-sizing: border-box;
     font-family: "Work Sans", sans-serif;
     scroll-behavior: smooth;
-    max-width:100%;
+    max-width: 100%;
 }
-body{
+
+body {
     overflow-x: hidden;
 }
 
@@ -74,6 +75,10 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 .header .logo {
@@ -102,24 +107,27 @@ p {
 
 /* MenuBar Section */
 
-.menu-bar{
-    display: none;
-}
-.menu-icon[name="close-outline"]{
+.menu-bar {
     display: none;
 }
 
-@media (max-width:780px){
-    .header{
+.menu-icon[name="close-outline"] {
+    display: none;
+}
+
+@media (max-width:780px) {
+    .header {
         position: relative;
     }
-    .menu-bar{
+
+    .menu-bar {
         display: block;
         z-index: 9999;
         border: 2px solid var(--black);
         font-size: 2.5rem;
     }
-    .navbar{
+
+    .navbar {
         position: absolute;
         display: flex;
         top: 0;
@@ -140,43 +148,42 @@ p {
         transition: all 0.5s linear;
     }
 
-    .active .navbar{
+    .active .navbar {
         transform: translateY(0%);
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
     }
 
-    .active .menu-bar .menu-icon[name="menu-outline"]{
+    .active .menu-bar .menu-icon[name="menu-outline"] {
         display: none;
     }
-    .active .menu-bar .menu-icon[name="close-outline"]{
+
+    .active .menu-bar .menu-icon[name="close-outline"] {
         display: block;
     }
 
-    .navbar-lists{
-      flex-direction: column;
-      align-items: center; 
+    .navbar-lists {
+        flex-direction: column;
+        align-items: center;
     }
-    .navbar-lists .navbar-link{
+
+    .navbar-lists .navbar-link {
         color: var(--black);
-        font-size:2rem;
+        font-size: 2rem;
     }
 }
 
- .sticky .header{
+.sticky .header {
     position: fixed;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
     z-index: 9999;
     background: var(--white);
 }
-
-.sticky .section-hero{
-     margin-top: 12rem;
-}
-
 
 /* Reusable code */
 .section {
@@ -198,6 +205,11 @@ p {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-bio-two-column {
+    grid-template-columns: 35% 65%;
+    gap: 0;
+}
+
 .grid-three-column {
     grid-template-columns: repeat(3, 1fr);
 }
@@ -210,13 +222,16 @@ p {
 /* Hero section */
 .hero-image {
     max-width: 75%;
-    border-radius: 2.5rem;  
+    border-radius: 2.5rem;
 }
 
-.section-hero {
+main {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 3.5rem;
+    background: var(--bg);
 }
 
 .hero-top {
@@ -240,7 +255,7 @@ p {
     padding-bottom: 3rem;
 }
 
-.section-hero-image picture{
+.section-hero-image picture {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,7 +316,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
+
 .bio-image picture img {
     width: 60%;
     box-shadow: -2rem -2rem 0 0 var(--helper);
@@ -315,13 +331,17 @@ p {
     gap: 2rem;
 }
 
+.bio-data #hire {
+    text-align: justify;
+}
+
 .bio-stats h3 {
     margin-bottom: 1rem;
 }
 
 .bio-data-progress {
     height: 0.8rem;
-    width: 90%;
+    width: 80%;
     background-color: var(--para-tint);
     box-shadow: var(--shadow);
     border-radius: 10rem;
@@ -410,20 +430,22 @@ p {
     align-items: center;
 }
 
-.Resume-section picture img{
+.Resume-section picture img {
     width: 60%;
     box-shadow: -2rem -2rem 0 0 var(--helper);
 }
 
-.Educational-Section h3,p{
+p {
     color: var(--heading);
     padding: 1rem;
 }
-.Educational-Section .passing-year small,.icon{
+
+.Educational-Section .passing-year small,
+.icon {
     font-size: 1.4rem;
 }
 
-.Educational-Section .Educational-Details .location{
+.Educational-Section .Educational-Details .location {
     font-size: 1.5rem;
     display: inline-flex;
     justify-content: center;
@@ -434,6 +456,7 @@ p {
 .section-portfolio {
     background-color: var(--bg);
     transition: all 0.3s linear;
+    margin-top: 9rem;
 }
 
 .section-portfolio .grid-three-column {
@@ -441,11 +464,10 @@ p {
 }
 
 .portfolio-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3.6rem;
-    margin: 3.6rem 3.6rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin: 3.6rem;
 }
 
 .portfolio {
@@ -723,7 +745,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
-    padding:20px;
+    padding: 20px;
 }
 
 .contact-section .grid {
@@ -741,40 +763,49 @@ p {
 .contact-section button {
     width: 25%;
     text-align: center;
-    display:grid;
-    place-items:center;
+    display: grid;
+    place-items: center;
 }
 
 /* FOOTER SECTION */
 
-footer{
+footer {
     background: var(--black);
     padding: 5rem;
     transition: all 0.4s linear;
 }
-footer h3{
+
+footer h3 {
     color: var(--white);
     margin-bottom: 2.2rem;
 }
-footer ul{
+
+footer ul {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
-.footer-links li,.footer-links a,
-.footer-projects li,.footer-projects a,.about p,.footer-help li,.footer-help a{
-   color: var(--white);
-   font-size: 1.5rem;
-   justify-content: center;
-   align-items: center;
-   text-transform: capitalize;
+
+.footer-links li,
+.footer-links a,
+.footer-projects li,
+.footer-projects a,
+.about p,
+.footer-help li,
+.footer-help a {
+    color: var(--white);
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
 }
 
 .f-social-links {
-    margin: 1rem 0; 
+    margin: 1rem 0;
     text-align: center;
 }
-.f-social-links .icon{
+
+.f-social-links .icon {
     width: 3rem;
     height: 3rem;
     position: relative;
@@ -786,147 +817,173 @@ footer ul{
     animation: wave 3s linear infinite;
 }
 
-footer a:hover,footer a:active{
+footer a:hover,
+footer a:active {
     color: var(--helper);
     font-weight: 400;
 }
 
 /* SCROLL TO TOP  */
-.topbutton{
+.topbutton {
     position: fixed;
     right: 2%;
     bottom: 5%;
     z-index: 1;
 }
 
-.scroll-top{
+.scroll-top {
     width: 4rem;
     height: 4rem;
     background: var(--helper);
     padding: 1.2rem;
     /* display: inline-block; */
     animation: wave 3s linear infinite;
-   
+
+}
+
+.section-bio ol {
+    margin-bottom: 3rem;
+}
+
+.section-bio ol li {
+    list-style-type: disc;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    margin-left: 3rem;
 }
 
 /* Media Queries */
 
-/* 1 em = 16px */ 
+/* 1 em = 16px */
 /* 95em = 1500px */
 
-@media (max-width:95em){
-    .container{
-        max-width : 130rem;
+@media (max-width:95em) {
+    .container {
+        max-width: 130rem;
         padding: 0 3.5rem;
     }
-    .navbar-lists{
+
+    .navbar-lists {
         gap: 3.5rem;
     }
 
 
-    .Resume-section .grid-two-column{
+    .Resume-section .grid-two-column {
         grid-template-columns: 1fr 2fr;
     }
-    .Resume-section .Educational-Details .grid-three-column{
-     grid-template-columns: repeat(3,1fr);
+
+    .Resume-section .Educational-Details .grid-three-column {
+        grid-template-columns: repeat(3, 1fr);
     }
-    .Resume-image picture img{
+
+    .Resume-image picture img {
         width: 90%;
     }
 
 }
 
 
-/* 1 em = 16px */ 
+/* 1 em = 16px */
 /* 75em = 1200px */
 
-@media (max-width:75em){
-    html{
+@media (max-width:75em) {
+    html {
         font-size: 62.5%;
     }
-   .container{
-       max-width: 110rem;
-   }
-   .grid{
-       gap: 3.2rem;
-   }
+
+    .container {
+        max-width: 110rem;
+    }
+
+    .grid {
+        gap: 3.2rem;
+    }
 
 
-   .section-hero p{
-       line-height: 2.5rem;
-   }
+    .section-hero p {
+        line-height: 2.5rem;
+    }
 
-   .service-section .grid-three-column{
-       grid-template-columns: repeat(2,1fr);
-       gap: 3.2rem;
-   }
-   
+    .service-section .grid-three-column {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.2rem;
+    }
 
-   footer .grid-four-column{
-       grid-template-columns: 1fr 1fr;
-   }
+
+    footer .grid-four-column {
+        grid-template-columns: 1fr 1fr;
+    }
 
 }
 
 /* 790px */
-@media (max-width:58em){
-    html{
-        font-size:60% ;
+@media (max-width:58em) {
+    html {
+        font-size: 60%;
     }
-    .container{
+
+    .container {
         max-width: 86rem;
     }
 
-    /* Section HEro */
-    .section-hero .grid-two-column{
+    /* Section Hero */
+    .section-hero .grid-two-column {
         grid-template-columns: 1fr;
         margin-top: 0;
     }
-    .section-hero .section-data{
+
+    .section-hero .section-data {
         align-items: center;
     }
+
+    .section-hero #hire,
+    .hero-head {
+        display: flex;
+        justify-content: center;
+    }
+
     .section-hero p {
         text-align: center;
     }
-    .section-hero picture img{
+
+    .section-hero picture img {
         max-width: 60%;
         margin-top: 3.2rem;
     }
 
     /* Bio Data Section */
-    .section-bio .grid-two-column{
-        grid-template-columns: 1fr;
-    }
-    .bio-image{
-        grid-row: 2;
-    }
-    .bio-image picture{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .section-bio .bio-image picture img {
-        max-width: 45%;
-        margin-top: 3.2rem;
-    }
-    .contact-section .grid-two-column{
+    .grid-bio-two-column {
         grid-template-columns: 1fr;
     }
 
-   
-    /* Resume Section */
-    .Resume-section .grid-two-column{
+    .section-bio .grid-two-column {
         grid-template-columns: 1fr;
     }
-    .Resume-image{
+
+    .contact-section .grid-two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-skills ul li {
+        list-style-type: circle;
+    }
+
+    /* Resume Section */
+    .Resume-section .grid-two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .Resume-image {
         grid-row: 2;
     }
-    .Resume-image picture{
+
+    .Resume-image picture {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .Resume-section .grid-two-column .Resume-image picture img{
+
+    .Resume-section .grid-two-column .Resume-image picture img {
         max-width: 45%;
         margin-top: 3.2rem;
     }
@@ -935,110 +992,130 @@ footer a:hover,footer a:active{
         margin-top: 3.2rem;
     }
 
-    .section-portfolio .portfolio-buttons{
+    .section-portfolio .portfolio-buttons {
         gap: 2rem;
     }
-    .section-portfolio .portfolio-buttons button{
+
+    .section-portfolio .portfolio-buttons button {
         font-size: 1.2rem;
     }
-    .section-portfolio .grid-three-column{
-        grid-template-columns: repeat(2,1fr);
+
+    .section-portfolio .grid-three-column {
+        grid-template-columns: repeat(2, 1fr);
         gap: 3.2rem;
     }
 
+    .section-portfolio .portfolio-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Educational-Section {
+        width: 100%;
+    }
+
 }
+
 /* 560px */
-@media(max-width:35em){
-     .container{
-         max-width: 400px;
-     }
-     .common-heading {
+@media(max-width:35em) {
+    .container {
+        max-width: 400px;
+    }
+
+    .common-heading {
         font-size: 1.8rem;
         padding-bottom: 0.5rem;
     }
-     .section-portfolio .grid-three-column{
-         grid-template-columns: 1fr;
-     }
-     .section-portfolio .portfolio-buttons{
-         gap: 1rem;
-         font-size: 1rem;
-         padding: 0.5rem;
-     }
-     .section-hero picture img{
+
+    .section-portfolio .grid-three-column {
+        grid-template-columns: 1fr;
+    }
+
+    .section-portfolio .portfolio-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .section-hero picture img {
         max-width: 80%;
         margin-top: 3.2rem;
     }
-     
-     .service-section .grid-three-column{
-         grid-template-columns: 1fr;
-         gap: 4.6rem;
-     }
-    
-    .bio-data-progress span {
-         left: 72%;
-     }
-    .progress2 span {
-         left: 62%;
-     }
-    .progress3 span {
-         left: 76%;
-     }
-    .progress4 span {
-         left: 56%;
-     }
-     .progress5 span {
-         left: 66%;
-     }
-     .contact-section button{
-         width: 45%;
-     }
-     .contact-section{
-         padding:1rem;
-     }
 
-     .Resume-section .grid-three-column{
-         display: flex;
-         text-align: start;
-         flex-direction: column;
-         gap: 0.5rem;
-     }
-     .Resume-section .Educational-Section .Educational-Details h3{
-         font-size: 1.8rem;;
-     }
-     .Resume-section .grid-three-column .location{
-     flex-direction: row;
-     align-items: center;
-     justify-content: flex-start;
-     }
-     footer .grid-four-column{
+    .service-section .grid-three-column {
+        grid-template-columns: 1fr;
+        gap: 4.6rem;
+    }
+
+    .bio-data-progress span {
+        left: 72%;
+    }
+
+    .progress2 span {
+        left: 62%;
+    }
+
+    .progress3 span {
+        left: 76%;
+    }
+
+    .progress4 span {
+        left: 56%;
+    }
+
+    .progress5 span {
+        left: 66%;
+    }
+
+    .contact-section button {
+        width: 45%;
+    }
+
+    .contact-section {
+        padding: 1rem;
+    }
+
+    .Resume-section .grid-three-column {
+        display: flex;
+        text-align: start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .Resume-section .Educational-Section .Educational-Details h3 {
+        font-size: 1.8rem;
+        ;
+    }
+
+    .Resume-section .grid-three-column .location {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    footer .grid-four-column {
         grid-template-columns: 1fr;
     }
-    .parallex{
+
+    .parallex {
         background-image: url("images/logo1.webp");
         background-position: fixed;
         background-size: 100% 100%;
     }
 
-    .portfolio-buttons{
-        display: grid;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .section-portfolio .portfolio-buttons button{
-        margin-bottom: 1rem;;
+    .section-portfolio .portfolio-buttons button {
+        margin-bottom: 1rem;
     }
 
     /* Footer */
 
-    .footer-links ul,.footer-projects ul{
-       display: grid;
-       grid-template-columns: 1fr 1fr;
-       flex-direction: column;
+    .footer-links ul,
+    .footer-projects ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
     }
-    .contact-section button{
+
+    .contact-section button {
         width: 55%;
     }
 
 }
-
