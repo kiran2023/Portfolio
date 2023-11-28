@@ -194,6 +194,7 @@ p {
 .container {
     max-width: 140rem;
     margin: 0 auto;
+    padding: 3rem;
 }
 
 .grid {
@@ -226,7 +227,6 @@ p {
 }
 
 main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -549,7 +549,6 @@ p {
 }
 
 .service-section .grid {
-    margin-top: 10rem;
     row-gap: 10rem;
 }
 
@@ -829,6 +828,7 @@ footer a:active {
     right: 2%;
     bottom: 5%;
     z-index: 1;
+    width: max-content;
 }
 
 .scroll-top {
@@ -860,7 +860,7 @@ footer a:active {
 @media (max-width:95em) {
     .container {
         max-width: 130rem;
-        padding: 0 3.5rem;
+        padding: 2.5rem;
     }
 
     .navbar-lists {
@@ -893,6 +893,7 @@ footer a:active {
 
     .container {
         max-width: 110rem;
+        padding: 2rem;
     }
 
     .grid {
@@ -924,6 +925,7 @@ footer a:active {
 
     .container {
         max-width: 86rem;
+        padding: 1.2rem;
     }
 
     /* Section Hero */
@@ -1117,5 +1119,5 @@ footer a:active {
     .contact-section button {
         width: 55%;
     }
-    
+
 }
