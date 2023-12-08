@@ -1,6 +1,7 @@
 # Portfolio
 
-# Technology Used - HTML, CSS, JavaScript
+Technology Used - HTML, CSS, JavaScript.
+
 A personal portfolio developed using HTML, CSS, and JavaScript. Responsive website that showcases my work and achievements.
 
 1. Downloadable Resume 3. Contact form powered by Formspree
