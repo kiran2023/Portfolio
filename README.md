@@ -1,3 +1,4 @@
+<img src="https://github.com/kiran2023/Portfolio/blob/main/favicon/favicon.ico"> </img>
 # Portfolio
 A personal portfolio developed using HTML, CSS, and JavaScript. Responsive website that showcases my work and achievements.
 
