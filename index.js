@@ -118,4 +118,7 @@ const lazyImg = new IntersectionObserver(lazy, {
 
 lazyImg.observe(originalImg);
 
+const dateData = new Date();
+let yearData = dateData.getFullYear();
+document.getElementById("copyrights").innerHTML = yearData;
 
