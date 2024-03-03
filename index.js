@@ -38,6 +38,9 @@ p_btns.addEventListener('click', (e) => {
     });
 });
 
+// Footer Copyrights
+
+document.getElementById("copyrights").innerHTML = new Date().getFullYear();
 
 // Swiper Testimonial
 var swiper = new Swiper(".mySwiper", {
@@ -117,6 +120,3 @@ const lazyImg = new IntersectionObserver(lazy, {
 });
 
 lazyImg.observe(originalImg);
-
-document.getElementById("copyrights").innerHTML = new Date().getFullYear();
-
